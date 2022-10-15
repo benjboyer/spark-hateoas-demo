@@ -2,6 +2,7 @@ FROM groovy
 
 WORKDIR /app
 
+COPY main.groovy ./main.groovy
 COPY src ./src
 COPY public ./public
 
