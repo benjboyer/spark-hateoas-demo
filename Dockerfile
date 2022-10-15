@@ -2,7 +2,6 @@ FROM groovy
 
 WORKDIR /app
 
-COPY main.groovy .
-COPY public ./public
+COPY src ./src
 
-CMD ["groovy", "main.groovy"]
+CMD ["groovy", "src/main/groovy/main.groovy"]

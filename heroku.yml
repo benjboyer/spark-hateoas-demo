@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: groovy main.groovy
+  web: groovy src/main/groovy/main.groovy
