@@ -15,7 +15,7 @@ import java.util.stream.Collectors
 import static spark.Spark.*
 
 port((System.getenv()["PORT"] ?: 8080) as int)
-staticFiles.location("/assets")
+staticFiles.location("/public")
 
 @Field
 def users = [
