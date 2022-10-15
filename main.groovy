@@ -7,7 +7,7 @@ port((System.getenv()["PORT"] ?: 8080) as int)
 
 if (System.getenv()["DEBUG"]) {
         String projectDir = System.getProperty("user.dir")
-        String staticDir = "/src/main/resources/public"
+        String staticDir = "/public"
         staticFiles.externalLocation(projectDir + staticDir)
 } else {
         staticFiles.location("/public")

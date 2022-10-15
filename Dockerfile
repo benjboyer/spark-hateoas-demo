@@ -3,5 +3,6 @@ FROM groovy
 WORKDIR /app
 
 COPY src ./src
+COPY public ./public
 
-CMD ["groovy", "src/main/groovy/main.groovy"]
+CMD ["groovy", "-cp", "src", "main.groovy"]
