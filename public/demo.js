@@ -1,13 +1,40 @@
-Vue.component('layout', {
+Vue.component('demo', {
   template: `
-<div>
-  <p>Current user: {{ api?.whoami?.name }}</p>
-  <button @click="changeWhoAmI('ben')">Change to 'Ben'</button>
-  <button @click="changeWhoAmI('xavier')">Change to 'Xavier'</button>
-  <p>Can I see the secured resource ? {{ isLinkAvailable('secured') ? 'Yep' : 'Nope' }}</p>
-  <p>Let's take a little look at the secured resource... <button @click="secured()">just a little look...</button> ... but we are smart guys <a target="_blank" href="api/v1/secured">... are we ?</a></p>
-  <p>Current API: <pre>{{api}}</pre></p>
-</div>
+<b-carousel :autoplay="false">
+
+  <slide #body>
+    <p class="subtitle is-3">Les technos utilisées:</p>
+    <ul class="is-size-4">
+      <li><a target="_blank" href="https://buefy.org/">Buefy</a></li>
+      <li><a target="_blank" href="https://vuejs.org/">VueJS</a></li>
+      <li><a target="_blank" href="https://sparkjava.com/">Spark</a></li>
+      <li><a target="_blank" href="https://groovy-lang.org/">Groovy</a></li>
+    </ul>
+  </slide>
+
+  <slide #body>
+    <p class="title is-1 is-spaced">
+      Pour la partie serveur... (Spark & Groovy)
+    </p>
+    <p class="subtitle is-3">
+      Les concepts clés: 
+      <ul class="is-size-4">
+        <li>On index chaque <i>route</i> pour déterminer la <strong class="is-underlined">rel</strong>ation</li>
+        <li>La logique pour déterminer un <i>hypermedia</i> <strong class="is-underlined">doit être</strong> la même pour valider l'accès à la <i>route</i></li>
+      </ul>
+    </p>
+  </slide>
+
+  <slide #body>
+    <p>Current user: {{ api?.whoami?.name }}</p>
+    <b-button @click="changeWhoAmI('ben')">Change to 'Ben'</b-button>
+    <b-button @click="changeWhoAmI('xavier')">Change to 'Xavier'</b-button>
+    <p>Can I see the secured resource ? {{ isLinkAvailable('secured') ? 'Yep' : 'Nope' }}</p>
+    <p>Let's take a little look at the secured resource... <b-button @click="secured()">just a little look...</b-button> ... but we are smart guys <a target="_blank" href="api/v1/secured">... are we ?</a></p>
+    <p class="is-size-7">Current API: <pre>{{api}}</pre></p>
+  </slide>
+</b-carousel>
+
 `,
   data() {
     return {
