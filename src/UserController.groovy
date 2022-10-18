@@ -26,13 +26,13 @@ class UserController {
             JsonOutput.toJson(getCurrentUserLinks())
         }))
 
-        get('/whoami', new RelRoute(name: 'getWhoAmI', route: (req, res) -> {
-            JsonOutput.toJson(getCurrentUser() + getCurrentUserLinks())
-        }))
-
         get('/whoami/:name', new RelRoute(name: 'changeWhoAmI', route: (req, res) -> {
             def newName = req.params(':name')
             this.current = users[newName]
+            JsonOutput.toJson(getCurrentUser() + getCurrentUserLinks())
+        }))
+
+        get('/whoami', new RelRoute(name: 'getWhoAmI', route: (req, res) -> {
             JsonOutput.toJson(getCurrentUser() + getCurrentUserLinks())
         }))
 
@@ -40,7 +40,7 @@ class UserController {
                 name: 'secured',
                 valid: () -> this.current.admin,
                 route: (req, res) -> {
-            return "Yea sure..."
+            return "${this.current.name} a accès"
         }))
     }
 

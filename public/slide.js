@@ -12,7 +12,7 @@ Vue.component('slide', {
 `,
   data() {
     return {
-      colors: ['is-info', 'is-success', 'is-primary', 'is-link', 'is-light', 'is-dark']
+      colors: ['is-info', 'is-success', 'is-primary', 'is-link', 'is-dark']
     }
   },
   computed: {

@@ -26,7 +26,7 @@
     <p class="title is-1 is-spaced">
       Un exemple
     </p>
-    <pre class="is-3 has-background-dark has-text-grey-lighter">
+    <pre class="is-3"><code class="language-json">
   {
     "departmentId": 10,
     "departmentName": "Administration",
@@ -40,7 +40,7 @@
       }
     ]
   }
-    </pre>
+</code></pre>
   </slide>
 
   <slide #body>
@@ -74,12 +74,11 @@
 
   <slide #body>
     <p class="title is-1 is-spaced">
-      Comme toute chose, il y a des prérequis, il faut
+      Comme toute chose, il y a des prérequis, il faut surtout
     </p>
     <p class="subtitle is-3">
       <ul>
         <li>Designer les différents chemins pour les différents cas d'utilisation</li>
-        <li>Avoir une techno serveur qui permet de s'interroger elle-même</li>
       </ul>
     </p>
     <p class="subtitle is-3">
