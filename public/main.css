@@ -9,3 +9,12 @@
 pre {
   padding: 0 !important;
 }
+
+.image.is-256x256 {
+  height: 256px;
+  width: 256px;
+}
+
+.has-text-strikethrough {
+  text-decoration: line-through;
+}

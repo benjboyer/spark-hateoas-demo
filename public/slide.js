@@ -2,14 +2,20 @@ Vue.component('slide', {
   template: `
 <b-carousel-item>
   <section class="hero is-fullheight" :class="color">
-    <div class="hero-body">
-      <div class="content is-fullwidth">
+    <div class="hero-body" :class=" { 'is-justify-content-center': !fullwidth } ">
+      <div class="content" :class="{ 'is-fullwidth': fullwidth }">
         <slot name="body" />
       </div>
     </div>
   </section>
 </b-carousel-item>
 `,
+  props: {
+    fullwidth: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       colors: ['is-info', 'is-success', 'is-primary', 'is-link', 'is-dark']

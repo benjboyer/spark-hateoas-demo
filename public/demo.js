@@ -5,7 +5,7 @@ Vue.component('demo', {
   <slide #body>
     <p class="subtitle is-3">Les technos utilisées:</p>
     <ul class="is-size-4">
-      <li><a target="_blank" href="https://buefy.org/">Buefy</a></li>
+      <li><a target="_blank" href="https://buefy.org/">Buefy (Bulma)</a></li>
       <li><a target="_blank" href="https://vuejs.org/">VueJS</a></li>
       <li><a target="_blank" href="https://sparkjava.com/">Spark</a></li>
       <li><a target="_blank" href="https://groovy-lang.org/">Groovy</a></li>
