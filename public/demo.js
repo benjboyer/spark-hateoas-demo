@@ -136,7 +136,7 @@ async callLink(rel, queryParams, data) {
   <slide #body>
 
     <p class="title is-3 is-spaced">
-      Finalement, la démo...
+      Finalement, <a target="_blank" href="https://github.com/benjboyer/spark-hateoas-demo"><span class="is-underlined">la démo</span> <b-icon icon="github" /></a>
     </p>
 
     <p>Utilisateur courant: <strong>{{ api?.whoami?.name }}</strong></p>
